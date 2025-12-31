@@ -1,8 +1,8 @@
 # 第2次隨堂題目-隨堂-QZ2
 >
->學號：1234567   (學號和姓名都要寫)
+>學號：112111133
 ><br />
->姓名：王小明
+>姓名：林凱翎
 >
 
 本份文件包含以下主題：(至少需下面兩項，若是有多者可以自行新增)
@@ -10,84 +10,49 @@
 
 ## 說明程式與內容
 
-開始寫說明，該說明需說明想法，
-並於之後再對上述想法的每一部分將程式進一步進行展現，
-若需引用程式區則使用下面方法，
-若為.cs檔內程式除了於敘述中需註明檔案名稱外，
-還需使用語法` ```語言種類 程式碼 ``` `，其中語言種類若是要用python則使用py，java則使用java，C/C++則使用cpp，
-下段程式碼為語言種類選擇csharp使用後結果：
 
-```csharp
-public void mt_getResult(){
-    ...
-}
-```
-
-若要於內文中標示部分網頁檔，則使用以下標籤` ```html 程式碼 ``` `，
-下段程式碼則為使用後結果：
-
-```html
-<%@ Page Language="C#" AutoEventWireup="true" ...>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" ...>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
-```
-更多markdown方法可參閱[https://ithelp.ithome.com.tw/articles/10203758](https://ithelp.ithome.com.tw/articles/10203758)
-
-請在撰寫"說明程式與內容"該塊內容，請把原該塊內上述敘述刪除，該塊上述內容只是用來指引該怎麼撰寫內容。
 
 1. a.
-
-Ans: 
+主程式只負責路由判斷，透過 switch 判斷使用者請求的網址，再決定要渲染 EJS 頁面或交由靜態檔案處理模組，讓整體程式結構更清楚。
+Ans: ![alt text](image.png)
 
 
 
 
 1. b.
+這個檔案是把原本寫在主程式裡的 MIME 類型對照表抽出來，依照檔案副檔名回傳正確的 Content-Type，讓主程式不需要處理細節。
+Ans:![alt text](image-1.png)
 
-Ans:
 
-<!-- 請撰寫時，最後一句話再寫一次 -->
 
 
 1. c.
+這個檔案專門處理 CSS、JavaScript 和圖片等靜態資源，會依照副檔名設定對應的 Content-Type，若檔案不存在則自動導向 404 頁面。
+Ans:![alt text](image-2.png)
 
-Ans:
 
-<!--  請撰寫時，第一句話再寫一次  -->
 
 2. a.
+這個模組負責處理 EJS 模板的讀取與渲染，將重複的 fs.readFile 與 ejs.render 邏輯集中管理，也統一處理模板讀取失敗時的錯誤情況。
+Ans:![alt text](image-3.png)
 
-Ans:
 
-<!--  請撰寫時，第一句話再寫一次  -->
 
 2. b.
 
-Ans:
+Ans:![alt text](image-4.png)
 
-<!--  請撰寫時，第一句話再寫一次  -->
+
 
 2. c.
 
-Ans:
+Ans:![alt text](image-5.png)
+    ![alt text](image-6.png)
 
-<!--  請撰寫時，第一句話和最後一句再寫一次  -->
+
 
 2. d.
-
-Ans:
+當請求的頁面或檔案不存在時，會透過這個函式顯示 404 錯誤頁面，避免在主程式中重複撰寫錯誤處理程式碼。
+Ans:![alt text](image-7.png)
 
 
